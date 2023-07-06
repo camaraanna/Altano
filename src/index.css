@@ -1,13 +1,1067 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #000;
+  --black: #000;
+  --white: #fff;
+  --hover: #fff;
+  --border: solid #fff;
+  --font-Syne: "Syne", sans-serif;
+  --font-Inter: "Inter", sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*--------STRUCTURE :PRINCIPAL HEADER ------------- */
+
+/* Container  Parent of the navigation bar*/
+
+.nav {
+  height: 100px;
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.navbar-title {
+  text-decoration: none;
+  color: var(--white);
+  font-family: var(--font-Syne);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.Logo {
+  position: relative;
+  top: 24px;
+  z-index: 5;
+  right: 25px;
+}
+
+.Logo-img {
+  width: 10%;
+}
+
+/*------Container (child)  Information------*/
+.nav-info {
+  position: absolute;
+  right: 1px;
+  top: 10px;
+  z-index: 5;
+}
+
+/*----Title section and artiste----*/
+
+.title-reservation,
+.Program-title,
+.title {
+  font-size: 7rem;
+  font-family: var(--font-Syne);
+  font-weight: bolder;
+  text-align: initial;
+}
+
+/*--------CAROUSEL---------*/
+
+/*----Main container----*/
+.carousel-container {
+  height: 800px;
+  width: 1530px;
+  position: absolute;
+  top: -80px;
+  overflow: hidden;
+}
+
+/*  Container of the box  */
+.container-box-carousel {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.box-carousel {
+  position: relative;
+  height: 800px;
+  width: 400px;
+}
+
+/*----Container of all the information of the Id card----*/
+.idCard-information {
+  position: relative;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  width: 243px;
+  height: 420px;
+  right: 10px;
+  top: 310px;
+}
+
+.idCard-information,
+.idThumbnail {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*----Flex-box of the id Thumbnail----*/
+
+.idThumbnail {
+  height: 130px;
+  width: 210px;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+.idCard-date-concert {
+  left: 50px;
+  font-size: 1.3rem;
+  width: 100px;
+  height: 90px;
+  padding-top: 50px;
+  padding-left: 18px;
+}
+
+.idCard-name-artist {
+  display: flex;
+  left: 50px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 150px;
+  height: 120px;
+  padding-left: 18px;
+  top: 33px;
+  margin-top: -50px;
+}
+
+.artist-name {
+  display: flex;
+  top: -300px;
+  align-items: flex-start;
+}
+
+.idCard-container {
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.idCard-container:hover {
+  transform: translateY(70px);
+  -webkit-transform: translateY(70px);
+  -moz-transform: translateY(70px);
+  -ms-transform: translateY(70px);
+  -o-transform: translateY(70px);
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+/*------ID card Button----- */
+.btn-id-card {
+  position: relative;
+  border: none;
+  height: 130px;
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  width: 210px;
+  left: 17px;
+  bottom: 140px;
+  opacity: 0;
+  font-family: var(--font-Inter);
+  cursor: pointer;
+  background-color: transparent;
+}
+/*---------Animation Carousel------ */
+
+/*----Animation carousel (Back and forth)--- */
+
+.carousel-container .box-carousel {
+  animation: moveSlideshow 40s linear infinite;
+  -webkit-animation: moveSlideshow 40s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  50% {
+    transform: translate(-830%);
+    -webkit-transform: translate(-830%);
+    -moz-transform: translate(-830%);
+    -ms-transform: translate(-830%);
+    -o-transform: translate(-830%);
+  }
+}
+
+.idCard {
+  position: absolute;
+  top: -25px;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+/*----Pause animation when where are on the card or the box of the card--- */
+.carousel-container:hover .box-carousel {
+  animation-play-state: paused;
+}
+
+/*----BURGER NAVIGATOR HIDDEN--- */
+
+#burger-label {
+  cursor: pointer;
+}
+
+#nav-burger {
+  display: none;
+}
+.container-navbar-burger {
+  display: none;
+}
+
+.navbar-title-burger {
+  display: none;
+}
+.information {
+  display: none;
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---------SECTION INTRO--PROGRAM--ABOUT------- */
+
+.container-intro,
+#Program,
+#About,
+.Footer {
+  color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description-page,
+.container-intro,
+#About,
+.Footer {
+  color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  text-justify: distribute;
+  text-align-last: left;
+}
+
+.container-intro {
+  margin-top: 900px;
+  height: 200px;
+  width: 1100px;
+}
+
+#Program,
+#About {
+  width: 1100px;
+}
+
+#Program {
+  margin-top: 500px;
+  height: 1400px;
+  margin-bottom: 100px;
+}
+
+#About {
+  height: 1300px;
+}
+.description {
+  font-family: var(--font-Syne);
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---------PAGES------- */
+
+/*-------Layout container for all the pages------*/
+
+.container-page {
+  height: 2000px;
+  color: var(--white);
+  font-family: var(--font-Syne);
+  scroll-snap-type: y mandatory;
+}
+.container-page,
+.container-description {
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-page,
+.information-page,
+.container-page {
+  display: flex;
+  width: 1400px;
+}
+
+/*---------Artists Pages------- */
+/*---------Navbar------- */
+.nav-page {
+  height: 120px;
+  margin-top: 4px;
+  margin-bottom: 60px;
+}
+
+.Logo-img-page {
+  width: 40.1%;
+  margin-left: 75px;
+}
+
+.container-description {
+  width: 2000px;
+}
+.description,
+.concert-date,
+.description-page {
+  font-size: 2.5rem;
+}
+
+/*---------Navbar Artist Page------- */
+
+.information-page {
+  height: 800px;
+}
+
+.description-page {
+  width: 675px;
+}
+
+.concert-date {
+  display: flex;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+/*-----EMPTY SPACE---- */
+
+/*----Empty box : to let space bewteen the logo and the button goBack--- */
+
+.empty-box {
+  width: 1030px;
+}
+
+/*---------Reservation Page------- */
+/*----Title----- */
+.title-reservation {
+  margin-top: 10px;
+  font-family: var(--font-Syne);
+}
+.Reservation,
+.section-reservation,
+.section-reservation,
+.title-reservation,
+.container-btn-reservation {
+  color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-reservation {
+  display: flex;
+  height: 1500px;
+  width: 1300px;
+}
+
+input,
+select,
+#btn-form,
+.category-name-btn-form {
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--font-Syne);
+  color: var(--white);
+}
+
+/*--------Title receipt------- */
+
+.ticket-receipt-title {
+  font-size: 3.5rem;
+  position: relative;
+  color: var(--white);
+  height: 100px;
+  width: 500px;
+  z-index: 3;
+  bottom: 43px;
+}
+
+/*----- Container of the ticket and invisible title------ */
+
+#content {
+  display: flex;
+  width: 800px;
+  height: 900px;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 300px;
+  position: relative;
+}
+
+/*----Information on the ticket himself---- */
+
+.ticket-info {
+  position: relative;
+  font-size: 1.6rem;
+  color: #000;
+  top: 280px;
+  left: 62px;
+  font-weight: 700;
+  font-family: var(--font-Inter);
+  z-index: 4;
+}
+.ticket-receipt-invisible,
+.ticket-receipt-title {
+  position: relative;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*----Black title who will appear on the screenshot/pdf--- */
+.ticket-receipt-invisible {
+  color: #000;
+  font-size: 3rem;
+  height: 40px;
+  width: 400px;
+}
+.ticket {
+  width: 1000px;
+}
+
+/*----BUTTONS--- */
+
+/*----Button same characteristic--- */
+
+.btn-placement,
+.btn-reservation,
+.btn-goBack,
+#btn-form {
+  border: var(--border);
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-Inter);
+  text-decoration: none;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+#btn-form,
+.btn-placement,
+.btn-reservation {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+/*----Buttons filter (container)---- */
+.btn-container {
+  display: inline;
+}
+
+/*----Buttons filter----*/
+.btn-placement {
+  margin: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 100px;
+}
+
+.btn-placement {
+  height: 60px;
+  width: 140px;
+  cursor: pointer;
+}
+
+/*----Buttons filter  hover ( change to an other color when mouse is hover)----*/
+.btn-placement:hover,
+.btn-reservation:hover {
+  background-color: var(--hover);
+  color: rgb(0, 0, 0);
+}
+
+/*----Buttons VIEW on hover in the filter ( on the thumbnails)----*/
+.btn-view:hover,
+.card:hover,
+.btn-id-card:hover {
+  opacity: 1;
+  filter: grayscale(100px);
+  -webkit-filter: grayscale(100px);
+}
+.title-btn-view {
+  color: var(--white);
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.btn-view {
+  position: relative;
+  font-family: var(--font-Inter);
+  height: 198px;
+  width: 198px;
+  opacity: 0;
+  background-color: transparent;
+  z-index: 4;
+  border: var(--border);
+  bottom: 126px;
+  left: 128px;
+  margin: -90px;
+  border-radius: 48px;
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
+  -ms-border-radius: 48px;
+  -o-border-radius: 48px;
+  cursor: pointer;
+}
+
+/*----Buttons Go Back from the Artist Page----*/
+.btn-goBack {
+  width: 80%;
+  border: none;
+  margin-top: 20px;
+}
+
+.btn-goBack-reservation {
+  width: 80%;
+  border: none;
+  margin-top: 20px;
+  margin-left: -80px;
+}
+
+/*----Buttons Reservation----*/
+
+.btn-reservation {
+  height: 120px;
+  width: 400px;
+  margin: 20px;
+  font-size: 3rem;
+  margin-bottom: 100px;
+  margin-left: 0px;
+}
+
+/*----Inputs Reservation----*/
+#btn-form {
+  height: 80px;
+  width: 400px;
+  background-color: var(--black);
+  margin: 20px;
+}
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*------------ IMAGE-----------------*/
+/*-------Image Artiste Filter--------*/
+
+.container-img-artist {
+  display: inline-block;
+  width: 25%;
+}
+
+.card {
+  height: 300px;
+  top: 20px;
+}
+
+.thumbnail {
+  margin-top: 20px;
+}
+
+.img-artist:hover {
+  opacity: 1;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+
+/*Date of the concert */
+.text-img-artist {
+  font-size: 1.4rem;
+  font-family: var(--font-Syne);
+  text-align: center;
+}
+
+/*---------------------------------------------------------------*/
+/*---------------------------------------------------------------*/
+
+/*---------FOOTER------- */
+
+.Footer {
+  display: flex;
+  height: 200px;
+  width: 1105px;
+  justify-content: center;
+  align-items: end;
+}
+
+.copyright {
+  font-size: 1rem;
+  font-family: var(--font-Syne);
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------MOBILE --------------------------------- */
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    --border-radius: 50px;
+    --padding: 6.25vw;
+  }
+
+  /*------------------NAVIGATOR (BURGER)------------------------------*/
+  .container-navbar-burger {
+    display: none;
+  }
+
+  .container-navbar-burger {
+    display: flex;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: transparent;
+    left: 145px;
+  }
+
+  #burger-label {
+    display: block;
+    position: relative;
+    height: 18px;
+    width: 100px;
+    left: 180px;
+    border-bottom: 1px solid var(--blue);
+    margin: 0;
+    color: var(--blue);
+    font-size: 6rem;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .navbar-title-burger {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-left: 60px;
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-Syne);
+  }
+
+  .nav {
+    display: flex;
+    position: fixe;
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    z-index: 4;
+    right: 165px;
+  }
+
+  .Logo-img {
+    width: 100%;
+  }
+
+  .navbar-title {
+    visibility: hidden;
+  }
+  ScrollLink {
+    flex-direction: column;
+    position: fixed;
+  }
+
+  /*------------ANIMATION--------------------*/
+  #burger-label::after {
+    content: "=";
+    color: white;
+    position: absolute;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    font-size: 5rem;
+    height: 20px;
+    width: 80px;
+    top: 20px;
+    left: 10px;
+  }
+  #nav-burger,
+  .nav-info {
+    display: none;
+  }
+
+  .information {
+    display: flex;
+    position: relative;
+    height: 200px;
+    width: 2000px;
+    top: 100px;
+    background-color: rgb(192, 181, 30);
+    right: 100px;
+    flex-direction: column;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 0.8s cubic-bezier(0.5, 0.7, 0.4, 1);
+    -webkit-transition: 0.8s cubic-bezier(0.5, 0.7, 0.4, 1);
+    -moz-transition: 0.8s cubic-bezier(0.5, 0.7, 0.4, 1);
+    -ms-transition: 0.8s cubic-bezier(0.5, 0.7, 0.4, 1);
+    -o-transition: 0.8s cubic-bezier(0.5, 0.7, 0.4, 1);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    * {
+      opacity: 0;
+    }
+  }
+
+  #nav-burger:checked + #burger-label + .information {
+    max-height: 100vh;
+    visibility: visible;
+    opacity: 1;
+    padding: 2px;
+    * {
+      opacity: 1;
+    }
+  }
+
+  /*---------------------------------------------------------------*/
+  /*---------------------------------------------------------------*/
+
+  /*-------------------CAROUSEL-----------------------------*/
+  /*  Main container */
+  .carousel-container {
+    height: 815px;
+    width: 460px;
+    position: absolute;
+    top: -80px;
+    overflow: auto;
+  }
+
+  /*-----------------STOP ANIMATION ON MOBILE--------------------*/
+  .carousel-container .box-carousel {
+    animation: none;
+    -webkit-animation: none;
+  }
+
+  .idCard-container:hover {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transition: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+  }
+  /*---------------------------------------------------------------*/
+  /*---------------------------------------------------------------*/
+
+  /*---------------------PAGES-------------------------*/
+  .container-intro,
+  #About,
+  .Footer {
+    margin-top: 150px;
+    width: 300px;
+  }
+
+  .container-intro {
+    margin-top: 700px;
+    height: 200px;
+  }
+
+  .title,
+  .title-reservation,
+  .Program-title {
+    font-size: 2.3rem;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .Program-title {
+    margin-left: 50px;
+  }
+  .description {
+    font-size: 1.5rem;
+    text-justify: inter-word;
+    text-justify: distribute;
+    text-align-last: left;
+  }
+  /*-----Date of the concert (filter)-----*/
+  .text-img-artist {
+    font-size: 1.3rem;
+  }
+
+  .Program {
+    font-size: 2.3rem;
+    margin-left: 30px;
+  }
+
+  #Program {
+    margin-top: 500px;
+    height: 1500px;
+    margin-bottom: 100px;
+    width: 400px;
+  }
+
+  #About {
+    margin-top: 200px;
+    height: 800px;
+  }
+
+  /*--------IMAGE----------*/
+  /*----Image Artiste Filter---------  */
+  .container-img-artist {
+    width: 50%;
+    display: inline-block;
+  }
+
+  .card {
+    height: 0px;
+    top: 0px;
+  }
+
+  .img-artist:hover:active {
+    opacity: 1;
+    filter: none;
+    -webkit-filter: none;
+  }
+
+  /*----------BUTTONS---------  */
+
+  .title-btn-view {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: inherit;
+  }
+  .btn-view {
+    height: 122px;
+    width: 122px;
+    bottom: 87px;
+    left: 128px;
+    margin: -90px;
+    border-radius: 28px;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    -ms-border-radius: 28px;
+    -o-border-radius: 28px;
+  }
+
+  .btn-placement {
+    margin: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    height: 40px;
+    width: 110px;
+  }
+
+  /* CONCERT PAGE*/
+
+  /* Layout container for all the pages*/
+  .container-page {
+    display: flex;
+    width: 300px;
+    height: 2000px;
+    flex-direction: column;
+    color: var(--white);
+    scroll-snap-type: y mandatory;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*---------Buttons Go Back from the Artist Page------- */
+  .btn-goBack {
+    width: 80%;
+    border: none;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+  /*---------Button Form------- */
+  #btn-form {
+    height: 60px;
+    width: 200px;
+    margin: 20px;
+  }
+
+  input,
+  select,
+  #btn-form,
+  .category-name-btn-form {
+    text-decoration: none;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--white);
+  }
+
+  /*  Buttons Reservation  */
+
+  .btn-reservation {
+    height: 80px;
+    width: 200px;
+    margin: 20px;
+    font-size: 1.7rem;
+    margin-bottom: 100px;
+  }
+
+  /*------Concert Page-------*/
+
+  /*--------Navbar of the artist page------- */
+
+  .nav-page {
+    display: flex;
+    height: 120px;
+    width: 300px;
+    margin-top: 4px;
+    margin-bottom: 60px;
+    justify-content: center;
+  }
+
+  .Logo-img-page {
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 45px;
+  }
+
+  .information-page {
+    width: 300px;
+    height: 200px;
+    flex-direction: column;
+  }
+
+  .container-description {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description-page {
+    width: 300px;
+    font-size: 1.6rem;
+  }
+  .display-selectedcard {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 800px;
+    width: 300px;
+    z-index: 4;
+
+    top: -80px;
+  }
+  .concert-date {
+    display: flex;
+    margin-left: 65px;
+    margin-top: 30px;
+    font-size: 1.6rem;
+  }
+
+  /*EMPTY SPACE*/
+
+  /* Empty box : to let space between the logo and the button goBack*/
+  .empty-box {
+    width: 100px;
+  }
+
+  /*---------------------------------------------------------------*/
+  /*---------------------------------------------------------------*/
+
+  /*---------Reservation Page------- */
+
+  .Reservation,
+  .section-reservation,
+  .section-reservation,
+  .title-reservation,
+  .container-btn-reservation {
+    color: var(--white);
+    text-align: center;
+  }
+
+  .section-reservation {
+    display: flex;
+    height: 1500px;
+    width: 300px;
+    flex-direction: column;
+  }
+
+  .title-reservation {
+    margin-top: 10px;
+  }
+
+  #content {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    margin-top: 200px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .ticket-receipt-title {
+    display: flex;
+    height: 40px;
+    width: 80px;
+    margin-top: 10px;
+  }
+
+  .ticket-receipt-invisible {
+    display: flex;
+    height: 30px;
+    width: 300px;
+    color: #000;
+    font-size: 2rem;
+
+    justify-content: center;
+  }
+
+  .ticket {
+    display: flex;
+    height: 150px;
+    width: 300px;
+    left: 200px;
+    margin-bottom: 100px;
+  }
+
+  .container-ticket-info {
+    display: flex;
+    justify-content: center;
+    height: 160px;
+    width: 300px;
+    flex-direction: column;
+  }
+
+  /* Information on the ticket himself*/
+  .ticket-info {
+    display: flex;
+    color: #000;
+    top: 100px;
+    left: 20px;
+    font-size: 0.6rem;
+    font-weight: 540;
+    height: 100px;
+    width: 200px;
+  }
 }
