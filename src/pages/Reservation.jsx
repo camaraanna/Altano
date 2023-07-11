@@ -105,7 +105,7 @@ export const Reservation = () => {
                   Ticket: {ticketsAsNumber} <br />
                   For : {lastName} {firstName} <br />
                   Artist:{" "}
-                  <span id="ticket-info-name" style={{ color: val === "" || val === "true" ? "red" : "inherit" }}>
+                 <span id="ticket-info-name" style={{ color: val === "" || val === "true" ? "red" : "inherit" }}>
                     {val === "" || val === "true" ? "No Artist Selected" : val}
                   </span>
                   {/* By checking val === "", the message "No Artist Selected" will be displayed when val is an empty string, indicating that no artist has been selected. */}

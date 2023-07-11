@@ -1067,15 +1067,15 @@ select,
     font-weight: 540;
     height: 200px;
     width: 200px;
-    /* background-color: blue; */
   }
 
   #ticket-info-name {
-    display: flex;
+  position: absolute;
     height: 10px;
     width: 100px;
     margin-top: 25px;
+    left: 35px;
 
-    /* background-color: aqua; */
+  
   }
 }
