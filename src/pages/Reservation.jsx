@@ -12,6 +12,14 @@ export const Reservation = () => {
   const [lastName, setLastName] = useState("");
   const [val, setVal] = useState("");
   const ticketsAsNumber = Number(tickets);
+  const isFormValid = firstName !== "" && lastName !== "" && val !== "" && val !== "Select"; // Check if input fields are not empty
+
+  const handleReservation = () => {
+    if (isFormValid) {
+      // Perform action (e.g., createPDF) when the form is valid
+      createPDF();
+    }
+  };
   return (
     <div className="container-page">
       {/*---------FORM--------- */}
@@ -67,7 +75,9 @@ export const Reservation = () => {
               {data.map((value, index) => {
                 return (
                   <>
-                    <option value={value.name}> {value.name} </option>
+                    <option key={value.id} value={value.name}>
+                      {value.name}
+                    </option>
                   </>
                 );
               })}
@@ -76,7 +86,7 @@ export const Reservation = () => {
 
           <h4 className="category-name-btn-form"></h4>
           {/* Empty balise for space between buttons */}
-          <button className="btn-reservation" onClick={createPDF}>
+          <button className="btn-reservation" onClick={handleReservation} disabled={!isFormValid}>
             Reservation
           </button>
         </div>
@@ -94,7 +104,11 @@ export const Reservation = () => {
                 <p className="ticket-info">
                   Ticket: {ticketsAsNumber} <br />
                   For : {lastName} {firstName} <br />
-                  Name of the Artist : {val}
+                  Artist:{" "}
+                  <span id="ticket-info-name" style={{ color: val === "" || val === "true" ? "red" : "inherit" }}>
+                    {val === "" || val === "true" ? "No Artist Selected" : val}
+                  </span>
+                  {/* By checking val === "", the message "No Artist Selected" will be displayed when val is an empty string, indicating that no artist has been selected. */}
                 </p>
 
                 <img className="ticket" src={ticket} alt="img" />
