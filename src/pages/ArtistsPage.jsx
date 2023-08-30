@@ -62,7 +62,7 @@ export const ArtistsPage = () => {
               </div>
               <Link to={`/Reservation/`}>
                 <div>
-                  <button className="btn-reservation">Reservation</button>
+                  <button className="btn-reservation ArtistPage">Reservation</button>
                 </div>
               </Link>
             </div>

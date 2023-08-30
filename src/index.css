@@ -461,7 +461,8 @@ select,
 
 #btn-form,
 .btn-placement,
-.btn-reservation {
+.btn-reservation.ArtistPage,
+.btn-reservation.reservation {
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -489,7 +490,8 @@ select,
 
 /*----Buttons filter  hover ( change to an other color when mouse is hover)----*/
 .btn-placement:hover,
-.btn-reservation:hover {
+.btn-reservation.ArtistPage:hover,
+.btn-reservation.reservation:hover {
   background-color: var(--hover);
   color: rgb(0, 0, 0);
 }
@@ -543,8 +545,17 @@ select,
 }
 
 /*----Buttons Reservation----*/
+.btn-reservation.ArtistPage,
+.btn-reservation.reservation {
+  height: 120px;
+  width: 400px;
+  margin: 20px;
+  font-size: 3rem;
+  margin-bottom: 100px;
+}
 
-.btn-reservation {
+.btn-reservation.ArtistPage,
+.btn-reservation.reservation {
   height: 120px;
   width: 400px;
   margin: 20px;
@@ -919,14 +930,14 @@ select,
   }
 
   /*  Buttons Reservation  */
-
-  .btn-reservation {
+  .btn-reservation.ArtistPage,
+  .btn-reservation.reservation {
     height: 80px;
     width: 200px;
     margin: 20px;
     font-size: 1.7rem;
     margin-bottom: 100px;
-    margin-left: 45px;
+    margin-left: 25px;
   }
 
   /*------Concert Page-------*/
@@ -1070,12 +1081,14 @@ select,
   }
 
   #ticket-info-name {
-  position: absolute;
+    position: absolute;
     height: 10px;
     width: 100px;
-    margin-top: 25px;
+    margin-top: 23.8px;
     left: 35px;
-
-  
   }
+}
+
+:root {
+  --scroll: 0;
 }

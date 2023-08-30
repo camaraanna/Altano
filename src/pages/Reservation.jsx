@@ -86,7 +86,7 @@ export const Reservation = () => {
 
           <h4 className="category-name-btn-form"></h4>
           {/* Empty balise for space between buttons */}
-          <button className="btn-reservation" onClick={handleReservation} disabled={!isFormValid}>
+          <button className="btn-reservation reservation" onClick={handleReservation} disabled={!isFormValid}>
             Reservation
           </button>
         </div>
